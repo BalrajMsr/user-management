@@ -120,3 +120,9 @@ Code quality and consistency are enforced by ESLint and Prettier.
     ```bash
     npm run build
     ```
+
+## 🔐 Login Credentials
+To test authentication functionality, use the following credentials (from the ![Reqres](https://reqres.in/)
+ ):
+Username: eve.holt@reqres.in
+Password: cityslicka
