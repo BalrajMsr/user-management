@@ -12,28 +12,33 @@ const UserCardGrid: React.FC<Props> = ({ users, onEdit, onDelete }) => (
     <div className="user-cards-grid">
         {users.map((user) => (
             <div key={user.id} className="user-card">
-                <img
-                    src={user.avatar}
-                    alt={`${user.first_name} ${user.last_name}`}
-                    className="user-card-avatar"
-                />
-                <div className="user-card-name">
-                    {user.first_name} {user.last_name}
+                <div className='user-card-info'>
+                    <img
+                        src={user.avatar}
+                        alt={`${user.first_name} ${user.last_name}`}
+                        className="user-card-avatar"
+                    />
+                    <div className="user-card-name">
+                        {user.first_name} {user.last_name}
+                    </div>
+                    <div className="user-card-email">{user.email}</div>
                 </div>
-                <div className="user-card-email">{user.email}</div>
                 <div className="user-card-hover-actions">
                     <button
+                        aria-label={`Edit ${user.first_name} ${user.last_name}`}
                         className="floating-action-btn floating-edit-btn"
                         onClick={() => onEdit(user)}
                     >
                         <EditOutlined />
                     </button>
                     <button
+                        aria-label={`Delete ${user.first_name} ${user.last_name}`}
                         className="floating-action-btn floating-delete-btn"
                         onClick={() => onDelete(user)}
                     >
                         <DeleteOutlined />
                     </button>
+
                 </div>
             </div>
         ))}

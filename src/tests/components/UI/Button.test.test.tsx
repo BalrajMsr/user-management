@@ -22,7 +22,7 @@ describe('Button component', () => {
     render(<Button loading>Loading...</Button>);
     const button = screen.getByRole('button');
     expect(button).toBeDisabled();
-    expect(button.querySelector('svg')).toBeInTheDocument(); // Assuming LoadingSpinner renders an <svg>
+    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
   });
 
   it('calls onClick when clicked', () => {

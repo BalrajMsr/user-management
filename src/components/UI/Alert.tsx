@@ -11,11 +11,11 @@ const Alert: React.FC<AlertProps> = ({ type, message, onClose }) => {
     const styles = {
         success: {
             container: 'bg-green-50 border-green-200 text-green-800',
-            icon: <CheckCircle className="h-5 w-5 text-green-400" />,
+            icon: <CheckCircle role='img' aria-label='success-icon' className="h-5 w-5 text-green-400" />,
         },
         error: {
             container: 'bg-red-50 border-red-200 text-red-800',
-            icon: <AlertCircle className="h-5 w-5 text-red-400" />,
+            icon: <AlertCircle role='img' aria-label='error-icon' className="h-5 w-5 text-red-400" />,
         },
     };
 

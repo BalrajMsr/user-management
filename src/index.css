@@ -221,7 +221,6 @@ body {
 .user-card {
     background: white;
     border-radius: 16px;
-    padding: 24px;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     border: 1px solid #e2e8f0;
     transition: all 0.3s ease;
@@ -232,6 +231,31 @@ body {
 .user-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+}
+
+
+.user-card-info {
+    position: relative;
+    z-index: 1;
+    padding: 24px 0;
+}
+
+.user-card-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(74, 45, 45, 0.659);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.user-card:hover .user-card-info::before {
+    opacity: 1;
 }
 
 .user-card-avatar {
@@ -266,6 +290,7 @@ body {
     top: 35%;
     left: 40%;
     opacity: 0;
+    z-index: 10;
 }
 
 .user-card:hover .user-card-hover-actions {
@@ -376,7 +401,7 @@ body {
 
 /* Login page */
 .login-container {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #8080805c;
     min-height: 100vh;
     display: flex;
     align-items: center;
