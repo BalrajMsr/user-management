@@ -122,7 +122,6 @@ Code quality and consistency are enforced by ESLint and Prettier.
     ```
 
 ## 🔐 Login Credentials
-To test authentication functionality, use the following credentials (from the ![Reqres](https://reqres.in/)
- ):
-Username: eve.holt@reqres.in
-Password: cityslicka
+To test authentication functionality, use the following credentials (from the (https://reqres.in/)).
+- Username: eve.holt@reqres.in
+- Password: cityslicka
